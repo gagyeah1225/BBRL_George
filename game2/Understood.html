@@ -1,0 +1,26 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Recap
+{% endblock %}
+
+{% block content %}
+<font size="+2">
+   <p>
+        <p>
+        You and your group will play this game for 5 rounds. Since you will not see your round payoffs until after all
+        the games are played, you should treat your decisions in these 5 rounds independently.
+        </p>
+        <p>
+        If this game is chosen to compute your earnings, you will be paid based on the cumulative payoffs of these 5 rounds.
+        </p>
+        <p>
+        The instructions will remain available at the bottom of the page, and you can click "Review Instructions" to view it.
+        </p>
+        <i>Now we will play round {{ player.round_number }} of the game.</i>
+    </p>
+</font>
+    {% next_button %}
+
+{% endblock %}

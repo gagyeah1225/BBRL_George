@@ -1,0 +1,174 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Your Round {{player.subsession.round_number}} Decision
+{% endblock %}
+
+{% block content %}
+
+<!--<p>This is round <b>#{{player.subsession.round_number}}</b>. </p>-->
+
+<p>
+
+    {% formfields %}
+
+</p>
+
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+able-layout: fixed;
+        margin-left: auto;
+        margin-right: auto;
+        width: 500px;
+}
+td {
+        border: 1px solid #666;
+        word-break: normal;
+    text-align: center;
+      }
+
+        #green
+  {
+    background-color: green;
+  }
+        #blue
+  {
+    background-color: blue;
+  }
+               #gray
+  {
+    background-color: gray;
+  }
+</style>
+</head>
+<body>
+
+
+
+    <center>
+        <strong>
+            Payoff Table (ECUs)
+        </strong>
+    </center>
+
+    </p>
+    <p>
+
+    </p>
+
+
+
+<table height="500" width="1000" rules="all" border="1" align="center">
+  <tr>
+    <td></td>
+    <td></td>
+    <td colspan=8>Group Minimum Hours</td>
+  </tr>
+  <tr>
+    <td rowspan=8>Your Hours</td>
+    <td></td>
+    <td id="gray"><strong>70</strong></td>
+    <td id="gray"><strong>60</strong></td>
+    <td id="gray"><strong>50</strong></td>
+    <td id="gray"><strong>40</strong></td>
+    <td id="gray"><strong>30</strong></td>
+    <td id="gray"><strong>20</strong></td>
+    <td id="gray"><strong>10</strong></td>
+  </tr>
+  <tr>
+    <td id="gray"><strong>70</strong></td>
+    <td>103</td>
+    <td>93</td>
+    <td>83</td>
+    <td>73</td>
+    <td>63</td>
+    <td>53</td>
+    <td>43</td>
+  </tr>
+  <tr>
+    <td id="gray"><strong>60</strong></td>
+    <td></td>
+    <td>100</td>
+    <td>90</td>
+    <td>80</td>
+    <td>70</td>
+    <td>60</td>
+    <td>50</td>
+  </tr>
+   <tr>
+    <td id="gray"><strong>50</strong></td>
+    <td></td>
+    <td></td>
+    <td>98</td>
+    <td>88</td>
+    <td>78</td>
+    <td>68</td>
+    <td>58</td>
+  </tr>
+ <tr>
+    <td id="gray"><strong>40</strong></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>95</td>
+    <td>85</td>
+    <td>75</td>
+    <td>65</td>
+  </tr>
+  <tr>
+    <td id="gray"><strong>30</strong></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>93</td>
+    <td>83</td>
+    <td>73</td>
+  </tr>
+ <tr>
+     <td id="gray"><strong>20</strong></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>90</td>
+    <td>80</td>
+  </tr>
+ <tr>
+    <td id="gray"><strong>10</strong></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>88</td>
+  </tr>
+</table>
+
+   <p>
+
+    </p>
+
+    <p>
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Review Instructions
+      </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        {% include Constants.instruction_template  %}
+      </div>
+    </div>
+
+{% next_button %}
+
+</body>
+</html>
+{% endblock %}

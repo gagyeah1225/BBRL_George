@@ -1,0 +1,23 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Comprehension Check
+{% endblock %}
+
+{% block content %}
+    <p>
+        Please answer the following questions to check your understanding of the instructions. Please remember that, your round endowment is <b>100</b> ECUs points and
+        <b>Your Round Payoffs = ECUs you keep for yourself + {{subsession.mpcr}}*(total amount allocated of all members in your group).
+        </b> Please raise your hand if you need help.
+    </p>
+
+    {% formfields %}
+    <p>
+    Once you have checked your answer please click ‘Next’.
+    </p>
+
+    {% next_button %}
+
+{% endblock %}
+

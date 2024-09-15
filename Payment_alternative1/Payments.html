@@ -1,0 +1,96 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}Payments{% endblock %}
+{% block content %}
+<!--
+{participant.vars}}
+-->
+<p>
+<br>
+</p>
+    <p>
+        The game selected for payment is <strong>game {{ game_selected }}.</strong> These are the decisions made in the selected game.
+    </p>
+
+
+
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+able-layout: fixed;
+        margin-left: auto;
+        margin-right: auto;
+        width: 500px;
+}
+td {
+        border: 1px solid #666;
+        word-break: normal;
+    text-align: center;
+      }
+</style>
+</head>
+<body>
+<center>
+<h2>Game Information</h2>
+</center>
+
+<table border="1">
+  <tr>
+    <td>Round / Information</td>
+    <td>Your Decision</td>
+    <td>{{ a1 }}</td>
+    <td>Your Payoff</td>
+  </tr>
+  <tr>
+    <td>Round 1</td>
+    <td>{{ a4 }}</td>
+    <td>{{ a3 }}</td>
+    <td>{{ a2 }}</td>
+  </tr>
+  <tr>
+    <td>Round 2</td>
+    <td>{{ a7 }}</td>
+    <td>{{ a6 }}</td>
+    <td>{{ a5 }}</td>
+  </tr>
+  <tr>
+    <td>Round 3</td>
+    <td>{{ a10 }}</td>
+    <td>{{ a9 }}</td>
+    <td>{{ a8 }}</td>
+  </tr>
+  <tr>
+    <td>Round 4</td>
+    <td>{{ a13 }}</td>
+    <td>{{ a12 }}</td>
+    <td>{{ a11 }}</td>
+  </tr>
+      <tr>
+    <td>Round 5</td>
+    <td>{{ a16 }}</td>
+    <td>{{ a15 }}</td>
+    <td>{{ a14 }}</td>
+  </tr>
+</table>
+<br>
+<p>
+        {% if player.round_selected == 0 %}
+            <!--Please note that for Game 1, “1” in “Your Decision” column means Invest and “0” means Not to Invest.-->
+            Your points earned in this part of the experiment is <strong>{{ Points_earned }}</strong> ECUs.
+        {% else %}
+            Your points earned in this part of the experiment is <strong>{{ Points_earned }}</strong> ECUs.
+        {% endif %}
+</p>
+
+</body>
+</html>
+<p>
+
+</p>
+{% next_button %}
+
+{% endblock %}

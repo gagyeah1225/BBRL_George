@@ -1,0 +1,45 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Final Payments from the Study
+{% endblock %}
+{% block content %}
+<!--
+{participant.vars}}
+-->
+
+<font size="+2">
+<p>
+    Your payoff in each part of the experiment are as follows:
+</p>
+
+<p>
+    <ul>
+    <li>Part I Puzzle : <b> Payment will be handed to you by the experimenter.</b>
+        <li>Part II Puzzle : <u><b>Your points earned from this part will be handed to you privately by the Experimenter.</b></u></li>
+    <li>Part II Game (Selected Game: <b>{{game_selected}}</b>): <b>{{points_from_2}}</b> ECUs.</li>
+    <li>Game 3 (Lottery Game Virtual Coin flip yielded: <b>{{virtual_coin}}</b>) : <b>{{rr_msg}}</b> ECUs.</li>
+        <li>This leads to a total points earned of <b>{{pointstotal}}</b> ECUs.</li>
+        <li>The total points amount to <b>${{pointscurrency}}</b>, based on the conversion rate.</li>
+    <br>
+
+<p>
+    <u><b>Your Earnings (USD)</b></u>
+</p>
+    <br>
+
+        <li>Your total earnings in this experiment = <b>${{pointscurrency}}</b> + Show-up fee <b>$7.00</b> + Earnings from Part II Puzzle + Earnings from Part I (Puzzle and Computer Decisions) </li>
+        <li>Your total earnings in this experiment = <b>${{total}}</b> + Earnings from Part I (Puzzle and Computer Decisions) + Earnings from Part II Puzzle. </li>
+
+    </ul>
+
+</p>
+
+</font>
+<p>
+
+</p>
+{% next_button %}
+
+{% endblock %}

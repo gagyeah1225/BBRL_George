@@ -1,0 +1,38 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Your Decision
+{% endblock %}
+
+{% block content %}
+
+    <!-- {%  include Constants.instruction_template %} -->
+
+    <p>This is round <b>#{{player.subsession.round_number}}</b>. </p>
+    <p>
+        The multiplier of the Group Account in this round is {{subsession.multiplier}} . It means the total contribution in this round will be multiplied by {{subsession.multiplier}}, then divided equally to you and other {{num_other_players}} members.
+    </p>
+    <p>
+        Now you have <b>{{ Constants.endowment }}</b>.
+    </p>
+
+
+    {% formfields %}
+
+      <p>
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Review Instructions
+      </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        {% include Constants.instruction_template  %}
+      </div>
+    </div>
+
+
+    {% next_button %}
+
+
+{% endblock %}

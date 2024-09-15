@@ -1,0 +1,24 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+        {% if player.round_number == 5 %}
+            This is the final round of game 1.
+        {% else %}
+            Round {{ player.round_number }} is completed, please click "Next" to continue to round {{ player.next_round }}.
+        {% endif %}
+{% endblock %}
+
+{% block content %}
+  <!--
+    <p>
+        Your contribution to the group was { player.contribution }}. The group contribution was { group.total_contribution }} points.
+    </p>
+    <p>
+        Your pay-off this round is { player.payoff }}.
+    </p>
+-->
+
+    {% next_button %}
+
+{% endblock %}

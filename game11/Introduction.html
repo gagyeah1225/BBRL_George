@@ -1,0 +1,41 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    <h3>
+        <strong>Game 1 Instructions</strong>
+    </h3>
+
+{% endblock %}
+
+{% block content %}
+<font size="+2">
+
+    <p>
+        Game 1 consists of <b>5</b> rounds. In <b>each</b> round, you and the two computer bots will have an opportunity to invest in
+        a group account within 30 seconds. The round ends when the 30 seconds are up, or after you make your decision.
+        Clicking the “Invest” button allows you to invest. Waiting for the 30 seconds to elapse or clicking the “Do not Invest”
+        button allows you to not invest.
+    </p>
+
+    <p>
+        If <b>you or the two computer bots do not invest</b> in the group by the end of a round, each group member will earn <b>50</b> ECUs.
+        If you invest before the 30 seconds are up, then the computer bots will earn <b>100</b> ECUs, and you will earn <b>80</b> ECUs.
+        If at least one of the computer bots invests, and you do not invest, then you will earn <b>100</b> ECUs.
+    </p>
+    <p>
+        To summarize, there are 2 options:
+        <ul>
+        <li>If only one person or computer bot invests in your group account, the investor will earn 80 ECUs, and the other group members will earn 100 ECUs each.</li>
+        <li>If no one in your group invests, you and the two computer bots will receive 50 ECUs each.</li>
+        </ul>
+    </p>
+    <i>Now please click ‘Next’ and answer a few questions to check your comprehension of the instructions.</i>
+    </p>
+    </p>
+</font>
+    <p>
+
+    </p>
+{% next_button %}
+{% endblock %}

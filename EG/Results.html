@@ -1,0 +1,27 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Please click "Next" to proceed, the results of the lottery will be shown at the end of the experiment.
+{% endblock %}
+
+{% block content %}
+<!--
+    <p>
+        % if player.lottery_selected == 1%}
+            You chose gamble { player.choice }}.
+            "Heads" occurred in the virtual coin flip.
+            Your payoff is
+            <strong>{ player.payoff }}</strong>.
+        % else %}
+            You chose gamble { player.choice }}.
+            "Tails" occurred in the virtual coin flip.
+            Your payoff is <strong>{ player.payoff }}</strong>.
+        % endif %}
+    </p>
+    -->
+
+
+
+    {% next_button %}
+{% endblock %}

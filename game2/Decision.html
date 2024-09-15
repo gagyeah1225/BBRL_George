@@ -1,0 +1,35 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+<font size="+4">
+    Your Round {{player.subsession.round_number}} Decision
+{% endblock %}
+
+{% block content %}
+
+<!--    <p>This is round <b>#{{player.subsession.round_number}}</b>. </p>-->
+
+    <p>
+        Now you have <b>{{ Constants.endowment }}</b>.
+    </p>
+
+
+    {% formfields %}
+
+      <p>
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Review Instructions
+      </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        {% include Constants.instruction_template  %}
+      </div>
+    </div>
+
+
+    {% next_button %}
+</font>
+
+{% endblock %}

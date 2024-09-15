@@ -1,0 +1,80 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Please answer the following questions before stage 2 starts.
+{% endblock %}
+
+
+{% block content %}
+
+   <p>
+
+    </p>
+
+
+
+    <p>
+<!--    {% if player.id_number == 'A' %}-->
+<!--        <p>-->
+<!--        Given your seating position highlighted yellow below:-->
+<!--        </p>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <p>-->
+<!--        <img src="{% static 'images/part_II/A.jpg' %}"/>-->
+<!--        </p>-->
+<!--        <br>-->
+        {% formfields %}
+
+<!--    {% elif player.id_number == 'B' %}-->
+<!--        <p>-->
+<!--        Given your seating position highlighted in yellow below:-->
+<!--        </p>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <p>-->
+<!--        <img src="{% static 'images/part_II/B.jpg' %}"/>-->
+<!--        </p>-->
+<!--        <br>-->
+<!--        {% formfields %}-->
+
+<!--    {% elif player.id_number == 'C' %}-->
+<!--        <p>-->
+<!--        Given your seating position highlighted in yellow below:-->
+<!--        </p>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <p>-->
+<!--        <img src="{% static 'images/part_II/C.jpg' %}"/>-->
+<!--        </p>-->
+<!--        <br>-->
+<!--        {% formfields %}-->
+<!--    {% elif player.id_number == 'D' %}-->
+<!--        <p>-->
+<!--        Given your seating position highlighted in yellow below:-->
+<!--        </p>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <p>-->
+<!--        <img src="{% static 'images/part_II/D.jpg' %}"/>-->
+<!--        </p>-->
+<!--        <br>-->
+<!--        {% formfields %}-->
+
+<!--    {% else %}-->
+<!--&lt;!&ndash;        <font size="+2"> <b> How helpful did you find your group members </b></font> &ndash;&gt;-->
+<!--        <img src="{% static 'images/part_II/1.jpg' %}"/>-->
+<!--        <br>-->
+<!--        {% formfields %}-->
+<!--    {% endif %}-->
+
+    </p>
+
+    {% next_button %}
+
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Please answer the following questions before stage 2 starts.
+{% endblock %}
+
+
+{% block content %}
+
+   <p>
+
+    </p>
+
+
+
+    <p>
+    {% if player.id_in_group == 1 %}
+    <p>
+    <h3> If your group members are identified as follows: </h3>
+    <ul>
+    <li>Group member 1 is "B"</li>
+    <li>Group member 2 is "C"</li>
+    <li>Group member 3 is "D"</li>
+    </ul>
+    </p>
+        <br>
+        <br>
+        <br>
+
+        {% formfields %}
+
+    {% elif player.id_in_group == 2 %}
+    <p>
+    <h3> If your group members are identified as follows: </h3>
+    <ul>
+    <li>Group member 1 is "A"</li>
+    <li>Group member 2 is "C"</li>
+    <li>Group member 3 is "D"</li>
+    </ul>
+    </p>
+        {% formfields %}
+
+    {% elif player.id_in_group == 3 %}
+    <p>
+    <h3> If your group members are identified as follows: </h3>
+    <ul>
+    <li>Group member 1 is "A"</li>
+    <li>Group member 2 is "B"</li>
+    <li>Group member 3 is "D"</li>
+    </ul>
+    </p>
+        <br>
+
+        <br>
+        {% formfields %}
+    {% elif player.id_in_group == 4 %}
+        <p>
+        <h3> If your group members are identified as follows: </h3>
+        <ul>
+        <li>Group member 1 is "A"</li>
+        <li>Group member 2 is "B"</li>
+        <li>Group member 3 is "C"</li>
+        </ul>
+        </p>
+        <br>
+        <br>
+        <br>
+        {% formfields %}
+
+    {% else %}
+<!--        <font size="+2"> <b> How helpful did you find your group members </b></font> -->
+        <br>
+        {% formfields %}
+    {% endif %}
+
+    </p>
+
+{% next_button %}
+
+{% endblock %}

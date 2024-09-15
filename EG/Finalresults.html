@@ -1,0 +1,23 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+        Game 3 is over, please click "Next" to complete an exit survey.
+{% endblock %}
+
+
+
+{% block content %}
+<!--
+
+    <p>
+        This is the final game
+    </p>
+
+     <p>
+        Your payoff is { participant.vars }}
+    </p>
+<p></p>
+-->
+{{ next_button }}
+{% endblock %}

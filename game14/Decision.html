@@ -1,0 +1,52 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Your Round {{player.subsession.round_number}} Decision
+{% endblock %}
+
+{% block content %}
+
+<!--        <p>This is round <b>#{{player.subsession.round_number}}</b>. </p>-->
+        <font size="+2"> <p>What is your decision? </p> </font>
+
+    <p>
+      <button class="btn btn-primary" name="volunteer" value="True">Invest</button>
+      <!-- No next button, if don't volunteer wait for timeout -->
+    </p>
+
+
+
+    <p>
+      <button class="btn btn-primary" name="volunteer" value="False">Do not Invest</button>
+      <!-- No next button, if don't volunteer wait for timeout -->
+    </p>
+    <br>
+    <p>
+
+    </p>
+    <p>
+    <br>
+    </p>
+
+    <p>
+    <br>
+    </p>
+
+    <p>
+    <br>
+    </p>
+
+     <p>
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Review Instructions
+      </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        {% include Constants.instructions_template  %}
+      </div>
+    </div>
+
+    {% next_button %}
+{% endblock %}

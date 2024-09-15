@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}Survey{% endblock %}
+{% block content %}
+<p>
+    <strong>
+        Thank you for taking the time to complete this survey. The information collected will be held in the strictest confidence.
+        Completion of this survey will enable the researchers to do a more complete analysis of behavior during the experiment.
+    </strong>
+</p>
+
+{% formfields %}
+
+{% next_button %}
+
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Please answer the following questions before stage 2 starts.
+{% endblock %}
+
+
+{% block content %}
+
+<p>
+    {% formfields %}
+</p>
+
+
+<!--
+    <p>
+    {% if player.id_number == 'A' %}
+        <p>
+        Given your seating position highlighted yellow below:
+        </p>
+        <br>
+        <br>
+        <br>
+        <p>
+        <img src="{% static 'images/part_I/A.jpg' %}"/>
+        </p>
+        <font size="+2"> <b> How helpful did you find your group members </b></font>
+        <br>
+        {% formfields %}
+
+    {% elif player.id_number == 'B' %}
+        <p>
+        Given your seating position highlighted in yellow below:
+        </p>
+        <br>
+        <br>
+        <br>
+        <p>
+        <img src="{% static 'images/part_I/B.jpg' %}"/>
+        </p>
+        <font size="+2"> <b> How helpful did you find your group members </b></font>
+        {% formfields %}
+
+    {% elif player.id_number == 'C' %}
+        <p>
+        Given your seating position highlighted in yellow below:
+        </p>
+        <br>
+        <br>
+        <br>
+        <p>
+        <img src="{% static 'images/part_I/C.jpg' %}"/>
+        </p>
+        <font size="+2"> <b> How helpful did you find your group members </b></font>
+        {% formfields %}
+
+    {% else %}
+        <font size="+2"> <b> How helpful did you find your group members </b></font>
+        <img src="{% static 'images/part_I/1.jpg' %}"/>
+        {% formfields %}
+    {% endif %}
+
+
+
+    </p>
+-->
+
+    {% next_button %}
+
+{% endblock %}

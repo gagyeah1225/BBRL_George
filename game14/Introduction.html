@@ -1,0 +1,42 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    <h3> Game 1 Instructions </h3>
+{% endblock %}
+
+{% block content %}
+
+<font size="+2">
+
+     <p>
+        Game 1 consists of <b>5</b> rounds. In <b>each</b> round, you and the {{ Constants.num_other_players }} other group members
+        will have an opportunity to <b>individually invest in a group account within 30 seconds.</b> The round ends when the 30
+        seconds are up, or after you make your decision. Clicking the “Invest” button allows you to invest.
+        Waiting for the 30 seconds to elapse or clicking the “Do not Invest” button allows you to not invest.
+    </p>
+    <p>
+        If <b>no one</b> invests in the group by the end of a round, each group member will earn <b>50</b> ECUs.
+        If <b>one group member</b> invests before the 30 seconds are up, then the other {{ Constants.num_other_players }} members
+        who do not invest will earn <b>100</b> ECUs, and the person who invests will earn <b>80</b> ECUs. If two group members invest
+        at the same time, then it is randomly determined by the computers which one earns 80 ECUs vs. 100 ECUs.
+        Else, <b>the first person</b> to have invested will earn <b>80</b> ECUs, and <b>everyone else</b> will earn <b>100</b> ECUs.
+    </p>
+
+
+    <p>
+        <b>To summarize, there are 3 options:</b>
+        <ul>
+        <li>If only one person invests in your group account, the investor will earn 80 ECUs, and the other {{ Constants.num_other_players }} group members will earn 100 ECUs each. </li>
+        <li>If no one in your group invests, everyone will receive 50 ECUs each.</li>
+        <li>If more than one person invests, the first person to invest will earn 80 ECUs and the other group members will earn 100 ECUs each</li>
+        </ul>
+    </p>
+    <i>Now please click ‘Next’ and answer a few questions to check your comprehension of the instructions.</i>
+</font>
+
+    <p>
+
+    </p>
+{% next_button %}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Game 2 is over, please click "Next" to go to the next page.
+{% endblock %}
+
+
+
+{% block content %}
+<!--
+     <p>
+        Your payoff is {participant.vars }}
+    </p>
+<p></p>
+-->
+{% next_button %}
+{% endblock %}
